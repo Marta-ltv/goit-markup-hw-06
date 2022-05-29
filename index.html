@@ -69,8 +69,75 @@
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button data-modal-open class="btn studio" type="button">Заказать услугу</button>
-        </div>
-      </section>
+
+          <!-- Модальне вікно-->
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button data-modal-close class="close-modal">
+                <svg width="11px" height="11px">
+                  <use href="./images/icon.svg/close-modal.svg#icon-Vector"></use>
+                </svg>
+              </button>
+              <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+              <form class="modal-form" name="modal-form" autocomplete="off">
+                
+                  <label class="modal-label">
+                    <span class="form-title-lable">Имя</span>
+                    <span class="input-container">
+                    <input class="modal-input" type="text" name="username" />
+
+                    </span>
+                  </label>
+                
+              
+              
+                  <label class="modal-label">
+                    <span class="form-title-lable">Телефон</span>
+                    <span class="input-container">
+                    <input class="modal-input" type="tel" name="userphone" />
+
+                    </span>
+                  </label>
+                
+              
+                
+                  <label class="modal-label">
+                    <span class="form-title-lable">Почта</span>
+                    <span class="input-container">
+                    <input class="modal-input" type="email" name="usermail" />
+
+                  </span>
+                  </label>
+              
+               
+                  <label class="comment-label" rows="5">
+                    <span class="form-title-lable">Комментарий</span>
+                    <span class="input-container">
+                    <textarea class="comment-field" name="comment" placeholder="Введите текст"></textarea>
+                  </span>
+                
+                </label>
+              
+               
+                  <label class="modal-checkbox">
+                    <input class="modal-input-checkbox" type="checkbox" name="agreements" value="checkbox-form">
+                    <span class="modal-text-checkbox"> Соглашаюсь с рассылкой и принимаю 
+                    <a class="conditions" href="Условия договора">Условия договора</a>
+                    </span>
+                  </label>
+              
+              
+                <div class="submit-btn">
+                <button class="btn studio submit" type="submit">Отправить</button>
+              </div>
+
+              </form>
+              </div>
+              </section>
+            </div>
+          </div>
+
+          
 
       <!--Секція Особливості-->
       <section class="section">
@@ -462,18 +529,21 @@
             </li>
           </ul>
         </div>
+
+        <div class="container-sign-up">
+          <b class="sign-up">Подпишитесь на рассылку</b>
+          <form class="form-sign-up" name="form-sign-up" autocomplete="off">
+           <label class="sign-up-label">
+             <input class="sign-up-input" type="email" name="sign-up-email" placeholder="E-mail"/>
+           </label>
+           <button class="btn studio" type="submit">Подписаться</button>
+          </form>
+
+        </div>
+
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button data-modal-close class="close-modal">
-          <svg width="11px" height="11px">
-            <use href="./images/icon.svg/close-modal.svg#icon-Vector"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
