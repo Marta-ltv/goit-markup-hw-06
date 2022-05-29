@@ -467,6 +467,8 @@ color: var(--secondary-txt-cl);
 .comment-field {
   width: 100%;
   height: 120px;
+  outline: none;
+  padding: 12px 16px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -484,6 +486,21 @@ color: var(--secondary-txt-cl);
   padding: 12px 16px;
   padding-left: 42px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.input-container {
+position: relative;
+display: block;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: var(--main-txt-cl);
+  transform: translateY(-50%);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:hover,
@@ -494,6 +511,7 @@ color: var(--secondary-txt-cl);
 .modal-input-checkbox:focus {
 border-color: var(--accent-bg-cl);
 }
+
 
 .modal-text-checkbox {
   font-size: 14px;
@@ -507,11 +525,9 @@ border-color: var(--accent-bg-cl);
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  padding: 12px 16px;
 
   color: rgba(117, 117, 117, 0.5);
 }
-
 
 .comment-field {
   resize: none;
@@ -533,24 +549,62 @@ margin-bottom: 10px;
   text-align: left;
   margin-bottom: 20px;
 }
+
+.conditions {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-cl);
+}
+
 .modal-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
   margin-bottom: 30px;
 }
 
-.input-container {
+.form-icon-check {
   position: relative;
   display: block;
+  cursor: pointer;
 }
-.conditions {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-decoration-line: underline;
-    color: var(--accent-cl);
+
+.icon-check {
+align-items: center;
+display: flex;
+margin-right: 8px;
+fill: var(--white-color);
+border: 2px solid var(--main-txt-cl);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-check:hover,
+.icon-check:focus {
+border: 2px solid var(--accent-bg-cl);
+}
+
+.modal-input:hover + .form-icon,
+.modal-input:focus + .form-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input-checkbox:checked + .icon-check {
+background-color: var(--accent-bg-cl);
+}
+
+.modal-input-checkbox{
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
 }
 
 /*Секція Features*/
