@@ -295,8 +295,8 @@ align-items: center;
 
 /* Button */
 .btn.studio {
-  width: 200px;
-  height: 50px;
+  padding: 10px 16px;
+    min-width: 200px;
   border-radius: 4px;
   border: transparent;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -465,6 +465,7 @@ color: var(--secondary-txt-cl);
 }
 
 .comment-field {
+  display: block;
   width: 100%;
   height: 120px;
   outline: none;
@@ -502,7 +503,6 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   left: 12px;
   fill: var(--main-txt-cl);
   transform: translateY(-50%);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-container:hover,
@@ -522,6 +522,7 @@ fill:var(--accent-cl);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-left: 8px;
 
   color: var(--secondary-txt-cl);
 }
@@ -571,33 +572,37 @@ margin-bottom: 10px;
 }
 
 .form-icon-check {
-  position: relative;
-  display: block;
-  cursor: pointer;
+position: relative;
+top: 0;
+right: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 8px;
+cursor: pointer;
 }
 
+
 .icon-check {
-align-items: center;
-display: flex;
-margin-right: 8px;
-fill: var(--white-color);
-border: 2px solid var(--main-txt-cl);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  position: absolute;
+  border: 2px solid var(--main-txt-cl);
+  border-radius: 2px;
+  cursor: pointer;
+  fill: var(--white-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
 
 .icon-check:hover,
 .icon-check:focus {
 border: 2px solid var(--accent-bg-cl);
 }
 
-.input-container:hover .form-icon,
-.input-container:focus .form-icon {
-fill: var(--accent-color);
-}
-
 .modal-input-checkbox:checked + .icon-check {
 background-color: var(--accent-bg-cl);
 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+border: none;
 }
 
 .modal-input-checkbox{
@@ -970,11 +975,17 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
 
 /*Footer*/
 .footer {
-  background-color: var(--dark-bg-cl);
+background-color: var(--dark-bg-cl);
+  
 }
-.container.footer-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+
+footer {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+.footer-block {
+  flex: grow 1;;
 }
 
 .footer .mail,
@@ -1037,6 +1048,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   display: flex;
   align-items: baseline;
 }
+
+
 .socials-join {
   margin-right: 10px;
   justify-content: center;
@@ -1134,9 +1147,19 @@ border-color: var(--accent-bg-cl);
 .form-sign-up {
   margin-top: 20px;
 }
+
 .sign-up-label {
   margin-right: 12px;
 }
 
 
+.sign-up-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.sign-up-icon {
+  margin-left: 10px;
+  fill: var(--white-bg-cl)
+}
